@@ -1,0 +1,141 @@
+/* ---------------------
+---------------- GÉNÉRAL------------------------ 
+------------------------------------------*/
+@font-face {
+    font-family: "Bakso Sapi";
+    src: url(../font/BaksoSapi.otf);
+}
+
+@font-face {
+    font-family: "Alatsi";
+    src: url(../font/Alatsi-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../font/OpenSans-Regular.ttf);
+}
+
+#parents{
+    width: 55%;
+    /* border: 1px solid red; */
+}
+
+h1, h2{
+    font-family:Bakso Sapi;
+    color: #EAB25C;
+    font-size: 40px;
+    width: 100%;
+}
+
+h3{
+    font-family:Bakso Sapi;
+    color: #A86149;
+    font-size: 19px;
+}
+
+/* .container h1, h2{
+    font-family: Bakso Sapi;
+    font-size: 42px;
+    color: #EAB25C;
+}
+
+.container h3 {
+    font-family: Bakso Sapi;
+    font-size: 19px;
+    color: #A86149;
+} */
+/* .container h3.mt-5.mb-4{
+    font-family: Bakso Sapi;
+    font-size: 20px;
+    margin-left: 145px;
+    color: #A86149;
+} */
+
+article p{
+    font-family: Open Sans;
+    font-size: 16px;
+    color: #386284;
+}
+a {
+    text-decoration: none;
+    color: #A86149;
+}
+
+#separator {
+    width: 3px;
+    margin: 15% auto;
+    /* border: 1px solid red; */
+}
+
+/* #connexion{
+    border: 1px solid red;
+} */
+
+.login{
+    font-family: Open Sans;
+    color: #A86149;
+    font-size: 16px;
+}
+.mdp{
+    font-family: Open Sans;
+    color: #A86149;
+    font-size: 16px;
+}
+.mdpoublie{
+    color: #EAB25C;
+}
+.mdpoublie:hover{
+    color: #EAB25C;
+}
+button.btn.btn-lg.btn-primary.mt-4{
+    background-color: #EAB25C;
+    border: 2px solid #EAB25C;
+    border-radius: 40px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+    font-family: Bakso Sapi;
+    font-size: 15px;
+}
+button.btn.btn-lg.btn-primary.mt-4:hover{
+    color: #A86149;
+}
+
+input#inputLogin_user.form-control,input#inputPassword.form-control {
+    border: 2px solid #A86149;
+    border-radius: 30px;
+}
+
+.eye{
+    padding: 6px;
+    position: fixed;
+    border-radius: 30px;
+    border: 2px solid #A86149;
+}
+
+#btn{
+    z-index: 10;
+    background-color: #EAB25C;
+    color: #A86149;
+}
+
+.logout a:hover {
+    color: #EAB25C;
+}
+
+#creer {
+    margin: 5px;
+    width: 100%;
+    border-radius: 30px;
+    border: 2px solid #A86149;
+    background-color: white;
+    color: #A86149;
+}
+
+#creer:hover {
+    background-color: #EAB25C;
+    color: #A86149;
+}
+
+.btn a:hover {
+    color: white;
+}

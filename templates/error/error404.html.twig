@@ -1,0 +1,60 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	Page non trouvée
+{% endblock %}
+
+{% block style %}
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link href="{{ asset('assets/css/error404.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+
+	<div class="container">
+
+        <h1 class="text-center mt-5">OUPS !</h1>
+
+        <div class="row">
+            <section class="img">
+                <img src="{{ asset('assets/images/error404/img_paresseux_404.png') }}" alt="">
+            </section>
+            <section class="card col-8 p-4">
+                <div class="error">
+                    <div class="d-flex justify-content-start">
+                        <p>Il semblerais que la page
+                            <br>
+                            ne se charge pas !
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-center text-center">
+                        <h3>404 <br> ERROR</h3>
+                    </div>
+                    <div class="d-flex justify-content-end text-end pt-5">
+                        <p>Nos équipes travaillent
+                            <br>
+                            pour remédier
+                            <br>
+                            à ce problème au plus vite !
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="title col-4">
+                <div class="row">
+                    <div class="titre text-center">
+                        <h2>Rafraichis cette page !</h2>
+                    </div>
+                    <div class="info">
+                        <p>Si cela ne fonctionne toujours pas, <br> nous t'invitons à te rendre sur la page principale du site</p>
+                    </div>
+                    <div class="button">
+                        <a href="{{path('agria_main')}}"><button type="button" class="btn">Page principale</button></a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+{% endblock %}

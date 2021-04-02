@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Bakso Sapi";
+    src: url(../font/BaksoSapi.otf);
+}
+
+@font-face {
+    font-family: "Alatsi";
+    src: url(../font/Alatsi-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../font/OpenSans-Regular.ttf);
+}
+
+h1 {
+    font-family:Bakso Sapi;
+    color: #EAB25C;
+    text-align: center;
+    font-size: 40px;
+}
+
+.container span:hover {
+    color: #A86149;
+}
+
+label{
+    font-family: "Alatsi";
+    font-size: 16px;
+    color: #A86149;
+}
+
+form {
+    width: 50%;
+    height: 308px;
+    /* border: 1px solid black; */
+}
+
+.condi label{
+    font-size: 10px;
+    color: #A86149;
+}
+
+#pass ,#pass2 {
+    border-radius: 30px;
+    border: 2px solid #A86149;
+}
+
+.eye{
+    padding: 6px;
+    position: fixed;
+    border-radius: 30px;
+    border: 2px solid #A86149;
+}
+
+.icon{
+    color: #A86149;
+}
+
+#btn{
+    z-index: 10;
+}
+
+.button{
+    font-family: "Bakso Sapi", serif !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 5%;
+}
+.btn-jaune {
+    background-color: #EAB25C;
+    color: white;
+}
+
+.btn:hover{
+    color: #A86149;
+}
+
+.shadow{
+    box-shadow: 10px 5px 5px;
+}
+img.img-fluid{
+    margin-top: 30px;
+    position: absolute;
+}

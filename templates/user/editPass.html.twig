@@ -1,0 +1,46 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}
+	Modification du profile de
+	{{app.user.nameuser}}
+{% endblock %}
+
+{% block style %}
+	{{parent()}}
+	<link rel="stylesheet" href="{{ asset('assets/css/editPass.css') }}">
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<a href="{{path('user')}}"><img src="{{asset('assets/images/animal/animal-details/gorille/arrow.png')}}" alt="" class="img-fluid"></a>
+		<h1>Modification du mot de passe de
+			<span>{{app.user.loginuser}}</span></h1>
+
+		<div class="d-flex justify-content-center">
+			<form method="post" class="form p-5">
+				<label for="pass">Mot de passe</label>
+				<div class="form-field input-group mb-3 position-relative">
+					<input type="password" id="pass" name="pass" class="form-control">
+					<span id="btn" class="btn-jaune btn btn-outline eye position-absolute end-0">
+						<i id="icon" class="far fa-eye-slash"></i>
+					</span>
+				</div>
+
+				<label for="pass2">Confirmer le mot de passe</label>
+				<div class="form-field input-group mb-3 position-relative">
+					<input type="password" id="pass2" name="pass2" class="form-control">
+					<span id="btn" class="btn-jaune btn btn-outline eye position-absolute end-0">
+						<i id="icon2" class="far fa-eye-slash"></i>
+					</span>
+				</div>
+				<div class="button">
+					<button type="submit" class="btn-jaune btn border rounded-pill shadow">Valider</button>
+				</div>
+			</div>
+		</form>
+	</div>
+{% endblock %}
+{% block script %}
+	{{parent()}}
+	<script src="{{asset('assets/js/editPass.js')}}"></script>
+{% endblock %}

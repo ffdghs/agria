@@ -1,0 +1,300 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+
+#---------------------------------------------------------
+#----------------------BACKOFFICE-------------------------
+#---------------------------------------------------------
+agria_backoffice:
+    path: /bo
+    controller: App\Controller\BackOfficeController::index
+
+#----------------------
+#--------ANIMALS-------
+#----------------------
+agria_animal_showAll:
+    path: /bo/animals
+    controller: App\Controller\AnimalController::showAllAnimal
+agria_animal_addAnimal:
+    path: /bo/animalAdd
+    controller: App\Controller\AnimalController::addAnimal
+agria_animal_update:
+    path: /bo/animal/update/{id}
+    controller: App\Controller\AnimalController::update
+    requirements:
+        id: \d+
+agria_animal_delete:
+    path: /bo/animal/delete/{id}
+    controller: App\Controller\AnimalController::delete
+    requirements:
+        id: \d+
+
+
+
+#----------------------
+#--------AVATARS-------
+#----------------------
+agria_avatar_showAll:
+    path: /bo/avatars
+    controller: App\Controller\AvatarController::showAllAvatar
+agria_avatar_addAvatar:
+    path: /bo/avatarAdd
+    controller: App\Controller\AvatarController::addAvatar
+agria_avatar_update:
+    path: /bo/avatar/update/{id}
+    controller: App\Controller\AvatarController::update
+    requirements:
+        id: \d+
+agria_avatar_delete:
+    path: /bo/avatar/delete/{id}
+    controller: App\Controller\AvatarController::delete
+    requirements:
+        id: \d+
+
+#----------------------
+#--------BADGES-------
+#----------------------
+agria_badge_showAll:
+    path: /bo/badges
+    controller: App\Controller\BadgeController::showAllBadge
+agria_badge_addBadge:
+    path: /bo/badgeAdd
+    controller: App\Controller\BadgeController::addBadge
+agria_badge_update:
+    path: /bo/badge/update/{id}
+    controller: App\Controller\BadgeController::update
+    requirements:
+        id: \d+
+agria_badge_delete:
+    path: /bo/badge/delete/{id}
+    controller: App\Controller\BadgeController::delete
+    requirements:
+        id: \d+
+
+#----------------------
+#-------HABITATS-------
+#----------------------
+agria_habitat_showAll:
+    path: /bo/habitats
+    controller: App\Controller\HabitatController::showAllHabitat
+agria_habitat_addHabitat:
+    path: /bo/habitatAdd
+    controller: App\Controller\HabitatController::addHabitat
+agria_habitat_update:
+    path: /bo/habitat/update/{id}
+    controller: App\Controller\HabitatController::update
+    requirements:
+        id: \d+
+agria_habitat_delete:
+    path: /bo/habitat/delete/{id}
+    controller: App\Controller\HabitatController::delete
+    requirements:
+        id: \d+
+
+
+#----------------------
+#-------PICTURES-------
+#----------------------
+agria_picture_showAll:
+    path: /bo/pictures
+    controller: App\Controller\PictureController::showAllPicture
+agria_picture_addPicture:
+    path: /bo/pictureAdd
+    controller: App\Controller\PictureController::addPicture
+agria_picture_update:
+    path: /bo/picture/update/{id}
+    controller: App\Controller\PictureController::update
+    requirements:
+        id: \d+
+agria_picture_delete:
+    path: /bo/picture/delete/{id}
+    controller: App\Controller\PictureController::delete
+    requirements:
+        id: \d+
+
+#----------------------
+#-------PINS-----------
+#----------------------
+agria_pin_showAll:
+    path: /bo/pins
+    controller: App\Controller\PinController::showAllPin
+agria_pin_addPin:
+    path: /bo/pinAdd
+    controller: App\Controller\PinController::addPin
+agria_pin_update:
+    path: /bo/pin/update/{id}
+    controller: App\Controller\PinController::update
+    requirements:
+        id: \d+
+agria_pin_delete:
+    path: /bo/pin/delete/{id}
+    controller: App\Controller\PinController::delete
+    requirements:
+        id: \d+
+
+#----------------------
+#------QUESTIONS-------
+#----------------------
+agria_question_showAll:
+    path: /bo/questions
+    controller: App\Controller\QuestionController::showAllQuestion
+agria_question_addQuestion:
+    path: /bo/questionAdd
+    controller: App\Controller\QuestionController::addQuestion
+agria_question_update:
+    path: /bo/question/update/{id}
+    controller: App\Controller\QuestionController::update
+    requirements:
+        id: \d+
+agria_question_delete:
+    path: /bo/question/delete/{id}
+    controller: App\Controller\QuestionController::delete
+    requirements:
+        id: \d+
+
+
+#----------------------
+#------TROPHIES--------
+#----------------------
+agria_trophy_showAll:
+    path: /bo/trophies
+    controller: App\Controller\TrophyController::showAllTrophy
+agria_trophy_addTrophy:
+    path: /bo/trophyAdd
+    controller: App\Controller\TrophyController::addTrophy
+agria_trophy_update:
+    path: /bo/trophy/update/{id}
+    controller: App\Controller\TrophyController::update
+    requirements:
+        id: \d+
+agria_trophy_delete:
+    path: /bo/trophy/delete/{id}
+    controller: App\Controller\TrophyController::delete
+    requirements:
+        id: \d+ 
+
+#----------------------
+#--------USERS---------
+#----------------------
+agria_user_showAll:
+    path: /bo/users
+    controller: App\Controller\UserController::showAllUser
+
+
+
+#---------------------------------------------------------
+#-------------------------FRONT---------------------------
+#---------------------------------------------------------
+agria_main:
+    path: /
+    controller: App\Controller\HomeController::index
+
+agria_message:
+    path: /message
+    controller: App\Controller\HomeController::email
+
+#ANIMALS
+agria_animals:
+    path: /animal
+    controller: App\Controller\AnimalController::frontAllAnimals
+agria_animals_by_habitat:
+    path: /habitat/{name}
+    controller: App\Controller\AnimalController::frontAnimalsByHabitat
+agria_animals_by_continent:
+    path: /continent/{id}
+    controller: App\Controller\AnimalController::frontAnimalsByContinent
+    requirements:
+        id: \d+
+agria_animals_details:
+    path: /details
+    controller: App\Controller\AnimalController::details
+agria_animals_diet:
+    path: /diet/{diet}
+    controller: App\Controller\AnimalController::getDiet
+agria_animals_type:
+    path: /type/{type}
+    controller: App\Controller\AnimalController::getType
+
+agria_pins:
+    path: /pin/{name}
+    controller: App\Controller\HomeController::getPins
+
+
+#MAP
+agria_map:
+    path: /explore
+    controller: App\Controller\MapSearchController::index
+
+#Jeux/error404
+agria_jeux:
+    path: /jeux
+    controller: App\Controller\ErrorController::error
+
+#A propos
+agria_about:
+    path: /about
+    controller: App\Controller\AboutController::about
+
+
+#test
+get_database:
+    path: /database
+    controller: App\Controller\HomeController::getDatabase
+get_card:
+    path: /animal/{name}
+    controller: App\Controller\HomeController::getAnimal
+add_favorite:
+    path: favorite/{login_user}/{id_animal}
+    controller: App\Controller\HomeController::addFavorite
+    requirements:
+        id_animal: \d+
+remove_favorite:
+    path: rmfavorite/{login_user}/{id_animal}
+    controller: App\Controller\HomeController::removeFavorite
+    requirements:
+        id_animal: \d+
+
+
+homepage:
+    path: /react
+    controller: App\Controller\HomeController::showHomepage
+
+
+
+   #--------------------------------------------------------------------#
+#--------------------------PAGES STATIQUES------------------------------------------#
+#--------------------------------------------------------------------#
+
+agria_gorille:
+  path: /detail/gorille
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+  defaults:
+    template: 'animal/gorille.details.html.twig'
+
+agria_dikdik:
+  path: /detail/dik
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+  defaults:
+    template: 'animal/dikdik.details.html.twig'
+
+agria_pelican:
+  path: /detail/pelican
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+  defaults:
+    template: 'animal/pelican.details.html.twig'
+
+
+
+
+#----------------------
+#--------USERS---------
+#----------------------
+agria_register:
+    path: /register
+    controller: App\Controller\RegisterController::register
+
+
+agria_user:
+    path: /user
+    controller: App\Controller\UserController::User

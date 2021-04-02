@@ -1,0 +1,290 @@
+#react-root {
+  position:relative;
+  top: -25px;
+  margin:0 auto;
+  z-index:10;
+  width:33%;
+}
+
+#map {
+  margin-top:0;
+  position:relative;
+}
+
+#map-asie{
+  cursor:url('../images/cursor/elephant.png') 1 1, pointer; 
+}
+#map-afrique{
+  cursor:url('../images/cursor/girafe.png') 2 2, pointer; 
+}
+#map-amnord{
+  cursor:url('../images/cursor/bear.png') 3 3, pointer; 
+}
+#map-amsud{
+  cursor:url('../images/cursor/whale.png') 4 4, pointer; 
+}
+#map-oceanie{
+  cursor:url('../images/cursor/sea-lion.png') 5 5, pointer; 
+}
+#map-europe {
+  cursor:url('../images/cursor/deer.png') 6 6, pointer; 
+}
+#map-antarctique {
+  cursor:url('../images/cursor/penguin.png') 7 7, pointer; 
+}
+.ocean-arctique, .ocean-antarctique, .ocean-pacifique, .ocean-atlantique, .ocean-indien {
+  cursor:url('../images/cursor/dolphin.png') 8 8, pointer; 
+}
+
+i {
+  color:#A86149;
+  font-size: 2rem;
+}
+
+main p {
+  font-family:Bakso Sapi;
+  color:#A86149;
+  margin-top: 1rem;
+}
+
+input {
+  border : #975942 solid 1px !important;
+  padding:10px 0 10px 40px !important;
+  border-right: none !important;
+  color:#EFC7AF !important;
+  font-family: Alatsi;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+  border:none;
+}
+
+.btn-searchBar {
+  border:#975942 solid 1px  !important;
+  border-left:none !important;
+  background-color: white !important;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+}
+
+::placeholder {
+  color:#EFC7AF !important;
+  font-family: Alatsi;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+h1 {
+  font-family: Bakso Sapi;
+  text-align: center;
+  color:#EAB25B;
+  letter-spacing: 3px;
+}
+
+.move {
+  left: -30px;
+  top: 30px;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards */
+}
+
+@keyframes move {
+  0% {
+    left:0;
+    right:0;
+  }
+  100% {
+    top:30px;
+    left:-30px;
+  }
+}
+
+#icones {
+  text-align: center;
+}
+
+#icones img {
+  height:100px; 
+}
+
+/* #aliments-type {
+  position: absolute;
+} */
+
+#aliments,#types,#habitats {
+  position:relative;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#aliments-type img, #types-type img, #habitats-type img {
+  width:30px;
+  height:40px;
+  position:absolute;
+}
+
+
+#text-herb,#text-carn,#text-frug,#text-gran, #text-pisc, #text-desert, #text-eau-douce, #text-eau-salee, #text-foret, #text-jungle, #text-montagne, #text-neige, #text-prairie, #text-savane,#text-mam,#text-poi,#text-ois,#text-rep {
+  position:absolute;
+  height:40px;
+}
+
+#text-herb {
+  top:69px;
+  left: 145px;px;
+}
+#text-carn {
+  top:-43px;
+  left:123px;
+}
+#text-frug{
+  top:-15px;
+  left:141px;
+}
+#text-gran {
+  top:28px;
+  left:150px;
+}
+#text-pisc {
+  top:105px;
+  left:129px;
+}
+
+#text-savane, #text-prairie, #text-neige, #text-montagne, #text-jungle, #text-foret, #text-eau-salee, #text-eau-douce, #text-desert {
+  top:60px;
+  left:1px;
+}
+
+
+#aliments-type img:nth-child(1) {
+  top:-50px;
+  left: 100px
+}
+#aliments-type img:nth-child(2) {
+  top:-20px;
+  left: 120px
+}
+#aliments-type img:nth-child(3) {
+  top:20px;
+  left: 130px
+}
+#aliments-type img:nth-child(4) {
+  top:65px;
+  left: 123px
+}
+#aliments-type img:nth-child(5) {
+  top:100px;
+  left: 110px;
+}
+
+#habitats-type img:nth-child(1) {
+  top:-50px;
+  left: 100px
+}
+#habitats-type img:nth-child(2) {
+  top:-20px;
+  left: 120px
+}
+#habitats-type img:nth-child(3) {
+  top:20px;
+  left: 130px
+}
+#habitats-type img:nth-child(4) {
+  top:65px;
+  left: 123px
+}
+#habitats-type img:nth-child(5) {
+  top:100px;
+  left: 110px;
+}
+#habitats-type img:nth-child(6) {
+  top:-60px;
+  left: 58px;
+}
+#habitats-type img:nth-child(7) {
+  top:-48px;
+  left: 15px;
+}
+#habitats-type img:nth-child(8) {
+  top:-20px;
+  left: -30px;
+}
+#habitats-type img:nth-child(9) {
+  top:30px;
+  left: -45px;
+}
+
+#types-type img:nth-child(1) {
+  top:97px;
+  left: 109px
+}
+#types-type img:nth-child(2) {
+  top:54px;
+  left: 130px
+}
+#types-type img:nth-child(3) {
+  top:7px;
+  left: 128px
+}
+#types-type img:nth-child(4) {
+  top:-41px;
+  left: 113px
+}
+
+#text-mam {
+  top:105px;
+  left:126px;
+  z-index: -1;
+}
+#text-ois {
+  top:58px;
+  left:125px;
+  z-index: -1;
+}
+#text-poi {
+  top:-38px;
+  left:118px;
+  z-index: -1;
+}
+#text-rep {
+  top:10px;
+  left:128px;
+  z-index: -1;
+}
+
+#icones {
+  width:25%;
+  margin: 0 auto;
+  display:flex;
+  justify-content: space-between;
+}
+
+#Pin-Gorille, #Pin-Pelican, #Pin-Dik {
+  opacity: 1;
+  /* -webkit-animation: pinAnimation;
+  -webkit-animation-duration:3s; */
+  animation: pinAnimation;
+  animation-duration: 3s;
+}
+
+@keyframes pinAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card-recto {
+  position:absolute;
+  transform: scale(2) !important;
+  top:calc(50% - 147px);
+  left:calc(50% - 129px) ;
+}
+

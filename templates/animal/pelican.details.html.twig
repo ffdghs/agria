@@ -1,0 +1,154 @@
+{% extends "layout.html.twig" %}
+
+{% block style %}
+	{{parent()}}
+	<link href="{{ asset('assets/css/animal-details.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% set favorite = false %}  
+
+{% block content %}
+	<section id="title">
+		<div class="container">
+			<div class="row">
+				<div class="col-2">
+					<a href="{{path('agria_map')}}"><img src="{{asset('assets/images/animal/animal-details/pelican/arrow.png')}}" alt="fleche" class="img-fluid"></a>
+				</div>
+				<div class="col-8 text-center">
+					<h1>Le Pélican</h1>
+				</div>
+				<div class="col-2 align-self-center d-flex justify-content-center">
+					{% if app.user %}
+						{% for favanimal in app.user.favoriteanimaluser %}
+							{% if favanimal.id == 35 %}
+								{% set favorite = true %}
+							{% endif %}
+						{% endfor %}
+						{% if favorite == true %}
+							<i class="fas fa-heart heart-recto" data-animal="35"></i>
+							{% set favorite = false %}
+						{% else %}
+							<i class="far fa-heart heart-recto" data-animal="35"></i>
+						{% endif %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="history">
+		<div class="container">
+			<div id="history-fill">
+				<div class="row">
+					<div id="history-content" class=" col-sm-12 col-md-6">
+						<h2>Bref résumé</h2>
+						<p>Le Pélican blanc (Pelecanus onocrotalus) est une espèce d’oiseaux de la famille des Pelecanidae.
+							<br>
+							<br>
+							On le trouve du sud-est de l’Europe jusqu’en Asie centrale et au Moyen-Orient, et dans la majeure partie de l’Afrique subsaharienne, dans les marais et les lacs peu profonds. Son nid est simplement constitué d’un amas de branchages au sol ou dans un arbre.
+							<br><br>
+							C’est une grande espèce de pélican avec une longueur de 160 cm pour une envergure de 280 cm. Il diffère du pélican frisé par son plumage blanc avec des nuances plus ou moins rosées, plus marquées en période nuptiale (il se teinte aussi d’un peu de jaunâtre à l’avant du corps en cette période), avec un aspect plus lisse et régulier de la disposition des plumes qui sont plus courtes, ainsi que par une large tache de peau nue rose autour des petits yeux sombres des pattes roses, et une poche jugulaire jaune sous son bec imposant.</p>
+					</div>
+					<div class="animal-content col-md-6">
+						<img class="img-fluid" src="{{asset('assets/images/animal/animal-details/pelican/Groupe 331.png')}}" alt="Un peu d'histoire">
+					</div>
+				</div>
+			</div>
+
+			<div class="icon-section col-5 offset-md-4">
+				<div class="row">
+					<div class="icon-item col-md-4 align-items-center">
+						<img src="{{asset('assets/images/animal/animal-details/pelican/v2/Pélican brun.png')}}" alt="pelican brun">
+						<p>Pélican Brun</p>
+					</div>
+					<div class="icon-item col-md-4 align-items-center">
+						<img src="{{asset('assets/images/animal/animal-details/pelican/v2/Pélicanfrise.png')}}" alt="pelican frisé">
+						<p>Pélican Frisé</p>
+					</div>
+					<div class="icon-item col-md-4 align-items-center">
+						<img src="{{asset('assets/images/animal/animal-details/pelican/v2/Pélican thage.png')}}" alt="pélican thage">
+						<p>Pélican Thage</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="habitat">
+		<div class="container">
+			<div id="habitat-fill">
+				<div class="row">
+					<div class="animal-content col-md-6"><img class="img-fluid" src="{{asset('assets/images/animal/animal-details/pelican/Groupe 332.png')}}" alt=""></div>
+					<div id="habitat-content" class="col-md-6">
+						<h2>Leur habitat</h2>
+						<p>Le pélican vit dans les lacs bordés d’une épaisse végétation, en particulier les estuaires, les lacs de steppe, les lagunes côtières et les marécages.
+							<br><br>
+							Sa répartition est assez grande, on peut le retrouver dans le sud-est de l’Europe, mais surtout au Proche-Orient, en Asie Centrale et en Afrique Tropicale ou Méridionale. Il est devenu plus rare en Europe.
+							<br>
+							Le nid va être placé sur un amas de roseaux, sur un banc de sable ou sur un rocher. Les pélicans nichent en colonie. En Europe, la période de nidification est entre avril et juin. La femelle pond deux oeufs dont l’incubation ne dépasse pas les 35 jours. Nidicoles, les jeunes prennent leur envol au bout de 65-70 jours.
+							<br>
+							<br>
+
+							La population grecque, qui ne dépasse pas une cinquantaine de couples, a montré ces dernières années une légère diminution. Les causes sont la disparition des habitats de nidification et d’alimentation. Ces disparitions sont dues à l’assèchement des zones humides pour la mise en culture des terres et l’extraction d’eau.</p>
+					</div>
+				</div>
+			</div>
+			<div class="icon-section col-5 offset-md-4">
+				<div class="row">
+					<div class="icon-item col-md-4 align-items-center">
+						<img src="{{asset('assets/images/animal/animal-details/pelican/1200px-La_Reunion_lagoon_dsc00241.png')}}" alt="Montagne Luxuriante">
+						<p>Lagune côtières</p>
+					</div>
+					<div class="icon-item col-md-4 align-items-center marecages">
+						<img src="{{asset('assets/images/animal/animal-details/pelican/moutouchis-marecages-dans-le-crique-pierre-a-saint-laurent-du-maroni.png')}}" alt="Grande Plaine">
+						<p>Marécages</p>
+					</div>
+					<div class="icon-item col-md-4 align-items-center">
+						<img src="{{asset('assets/images/animal/animal-details/pelican/v2/habitats.png')}}" alt="Continent Africain">
+						<p>Afrique et Asie centrale</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="food">
+		<div class="container">
+			<div id="food-fill">
+				<div class="row">
+					<div id="food-content" class="col-md-6">
+						<h2>Leur nourriture</h2>
+						<p>Le pélican blanc est très bien adapté à la vie dans l’océan. Son bec énorme lui permet d’attraper de gros poissons tout en volant au niveau de l’eau. Ses pattes sont palmées, facilitant le décollage et l’atterrissage à la surface de la mer. Il a été observé en parcourant des distances supérieures à 100 km en un jour pour se procurer la nourriture nécessaire.</p>
+
+						<p>Le pélican consomme presque exclusivement du poisson. Les pélicans frisés et blancs sont aussi capables d'avaler, lors de périodes de faim, des crustacés et des grenouilles. Lors des périodes de grande faim, ils peuvent même manger des petits oiseaux aquatiques comme des canetons ou des oisons.
+							<br>
+							<br>
+							Lorsqu'il se nourrit de poissons, il peut en consommer de 1 à 1.5 kg par jour. Sa technique de pèche est très originale puisque c’est un adepte de la pèche collective. Contrairement à sa réputation, il ne plonge pas beaucoup. Les petits trouvent le poisson dans la poche et dans la gorge de la femelle.</p>
+					</div>
+					<div class="animal-content col-md-6"><img class="img-fluid" src="{{asset('assets/images/animal/animal-details/pelican/v2/pelicanouvert.png')}}" alt="pelican"></div>
+				</div>
+			</div>
+			<div class="icon-section col-5 offset-md-4">
+				<div class="row">
+					<div class="icon-item col-md-4 align-items-center">
+						<img src="{{asset('assets/images/animal/animal-details/pelican/poissons-douleur-pexel-de-pixabay-scaled.png')}}" alt="Poissons">
+						<p>Poissons</p>
+					</div>
+					<div class="icon-item col-md-4 align-items-center">
+						<img src="{{asset('assets/images/animal/animal-details/pelican/v2/crustacés.png')}}" alt="Oisons">
+						<p>Crustacés</p>
+					</div>
+					<div class="icon-item col-md-4 align-items-center">
+						<img src="{{asset('assets/images/animal/animal-details/pelican/canetons-colvert.png')}}" alt="Canetons">
+						<p>Canetons</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block script %}
+	{{parent()}}
+	<script src="{{asset('assets/js/details.js')}}"></script>
+{% endblock %}

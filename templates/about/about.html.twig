@@ -1,0 +1,56 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}A propos
+{% endblock %}
+
+{% block style %}
+	{{parent()}}
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+	<link href="{{ asset('assets/css/about.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+	<section id="title">
+		<h1>À propos</h1>
+	</section>
+
+	<section id="education">
+		<div class="container">
+			<div class="row">
+				<div class="picture-bloc col-md-6"><img src="{{asset("assets/images/about/Master-Scene-3 Characters.png")}}" alt="4 designers et 4 développeurs au service de l'éducation !"></div>
+				<div class="content col-md-6">
+					<h3>4 designers et 4 développeurs au service de l'éducation !</h3>
+					<p>Passionnés par les animaux, nous voyageons aux 4 coins du monde à la découverte de nouvelles espèces !
+					Notre objectif ? Rendre accessible l’apprentissage de la faune à toutes et à tous !</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="values">
+		<div class="container">
+			<div class="row">
+				<div class="content col-md-6">
+					<h3>Nos valeurs</h3>
+					<p>Le fait de rendre l’apprentissage ludique est pour nous un challenge exaltant !
+                    Issus de la même école, nos valeurs sont basées sur le partage, la bienveillance et une certaine conscience écologique.</p>
+				</div>
+				<div class="picture-bloc col-md-6"><img src="{{asset("assets/images/about/Master-Scene-2 Characters.png")}}" alt="Nos valeurs">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="team">
+		<h2>La Team
+			<br>
+			Crazy 88</h2>
+		<div id="picto-bar">
+			<img src="{{asset("assets/images/about/picto-bar.png")}}" alt="">
+		</div>
+	</section>
+
+	<section id="picture">
+		<img src="{{asset("assets/images/about/nous_nous.png")}}" alt="">
+	</section>
+{% endblock %}

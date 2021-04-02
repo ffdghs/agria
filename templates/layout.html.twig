@@ -1,0 +1,114 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<div class="container">
+				<a class="navbar-brand" href="{{ path('agria_main') }}"><img src="{{asset('assets/images/logo_agria.png')}}" alt="Agria"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav d-flex align-items-center">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href={{path('agria_map')}}>Explorer</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="{{path('agria_jeux')}}">Jeux</a>
+						</li>
+						{# {% if is_granted('ROLE_ADMIN') %}
+						<li class="nav-item">
+							<a class="nav-link active" href="{{path('agria_backoffice')}}">Backoffice</a>
+						</li>
+						{% endif %} #}
+						{% if app.user %}
+							<li class="dropdown profil">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									{% if app.user.idavataruser.urlavatar is defined %}
+										<img src="{{asset("assets/images/avatar/")}}{{app.user.idavataruser.urlavatar}}" alt="">
+										{# <i class="fa fa-caret-down"></i> #}
+									{% else %}
+										<img src="{{ asset('assets/images/avatar/kevin.png') }}" alt="">
+									{% endif %}
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+									<li>
+										<a class="dropdown-item text-center" href="{{path('agria_user')}}">Mon profil</a>
+									</li>
+									{% if is_granted('ROLE_ADMIN') %}
+										<li>
+											<a class="dropdown-item text-center" href="{{path('agria_backoffice')}}">Backoffice</a>
+										</li>
+									{% endif %}
+									<li>
+										<a class="dropdown-item text-center" href="{{ path('app_logout') }}">Se Déconnecter</a>
+									</li>
+								</ul>
+							</li>
+						{% else %}
+							<li class="nav-item nav-connect">
+								<a href="{{ path('app_login') }}">
+									<button type="button" class="btn-connect btn btn-outline-light">Se Connecter</button>
+								</a>
+							</li>
+						{% endif %}
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		{% if app.user %}
+			<div id="user" data-user="{{app.user.loginuser}}"></div>
+		{% endif %}
+		{% block content %}{% endblock %}
+	</main>
+	<footer>
+		<div class="container pt-5">
+			<div id="footer-nav">
+				<div class="footer-item col-sm-12">
+					<p class="footer-item-title">CONTACTEZ-NOUS</p>
+					<div class="row footer-item-content">
+						<p>01 42 97 99 94</p>
+						<p>service@agria.com</p>
+						<p>25 rue du Jura 75002 Paris</p>
+						<p>France</p>
+					</div>
+				</div>
+				<div class="footer-item col-sm-12">
+					<p class="footer-item-title">SERVICES</p>
+					<div class="row footer-item-content">
+						<a href="{{path('agria_main')}}#background-logo">Formulaire de contact</a>
+						<a href="{{path('agria_about')}}">A propos</a>
+						{% if app.user %}
+							<a href="{{ path('app_logout') }}">Se Déconnecter</a>
+						{% else %}
+							<a href="{{path('app_login')}}">Se connecter</a>
+						{% endif %}
+						<a href="{{path('agria_map')}}">Explorer</a>
+						<a href="{{path('agria_animals')}}">Tous les animaux</a>
+						<a href="">FAQ</a>
+					</div>
+				</div>
+				<div class="footer-item col-sm-12">
+					<p class="footer-item-title">INFORMATION</p>
+					<div class="row footer-item-content">
+						<a href="">Contrôle parental</a>
+						<a href="">Politique de confidentialité</a>
+						<a href="">Mentions légales</a>
+						<a href="">Cookies</a>
+						<a href="">Plan du site</a>
+						<a href="">CGU</a>
+					</div>
+				</div>
+				<div class="d-flex flex-column">
+					<img src="{{asset('assets/images/logo_agria.png')}}" alt="">
+					<p id="copyright">©Agria - 2021</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+{% endblock %}

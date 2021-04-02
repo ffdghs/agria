@@ -1,0 +1,168 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}
+	{{ parent() }}
+	- Home
+{% endblock %}
+
+{% block style %}
+	{{parent()}}
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+	<link
+	href="{{ asset('assets/css/home.css') }}" rel="stylesheet"/>
+{# <link href="{{ asset('assets/css/general.css') }}" rel="stylesheet"/> #}
+{% endblock %}
+
+{% block content %}
+	<main>
+		<div id="cover-section">
+			<div id="cover-content" class="container">
+				<h1>Viens découvrir les
+					<br><span>ANIMAUX</span>
+					<br>
+					de notre planète</h1>
+				<a href="{{path('agria_map')}}">
+					<button id="cover-button" type="button" class="btn btn-primary">Découvrir
+						<i class="fas fa-chevron-right"></i>
+					</button>
+				</a>
+			</div>
+		</div>
+
+		<section id="top-section">
+			<div class="container">
+				<div class="row">
+					<div class="about-picture col-sm-12 col-md-6"><img src="{{ asset('assets/images/home/giraffe_frame.png') }}" alt="Concept"></div>
+					<div class="about-content col-sm-12 col-md-6">
+						<h2><span>Le concept</span></h2>
+                        <h3>Parcours le monde à la recherche de tes animaux préférés</h3>
+                        <p>Une application qui te permet de localiser simplement et aisément diverses espèces animals réparties aux quatre coins du monde.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="middle-section">
+			<div class="container">
+				<div class="row">
+					<div class="about-content col-sm-12 col-md-6">
+						<h2><span>Découvrir</span></h2>
+                        <h3>Apprend plein de nouvelles choses sur la faune du monde entier</h3>
+                        <p>Découvre le milieu naturel des animaux, combine sont-ils, ce qu'ils mangent et les risques auxquels ils font face ainsi que des conseils pour mieux les protéger.</p>
+					</div>
+					<div class="about-picture-mid col-sm-12 col-md-6"><img src="{{ asset('assets/images/home/komodo_frame.png') }}" alt="Découvrir">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="bottom-section">
+			<div class="container">
+				<div class="row">
+					<div class="about-picture col-sm-12 col-md-6">
+						<img src="{{ asset('assets/images/home/cervides_frame.png') }}" alt="Qui sommes-nous?">
+					</div>
+					<div class="about-content col-sm-12 col-md-6">
+						<h2><span>Qui sommes-nous ?</span></h2>
+                        <h3>Une jeune équipe passionnée par le monde sauvage</h3>
+                        <p>Entreprise indépendante à vocation educative, nous souhaitons te faire connaître les animaux du monde afin que tu puisses mieux les protéger quand tu seras plus grand.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="hands">
+			<div class="container">
+				<div id="wizard">
+					<h2>Envie d'une expérience plus riche ?</h2>
+				</div>
+				<div id="hand-section" class="row">
+					<div class="hand col-sm-12 col-md-4">
+						<img src="{{ asset('assets/images/home/hand1.png') }}" alt="Connecte-toi">
+						<h4>Connecte-toi</h4>
+                        <p>Crée un profil afin de pouvoir choisir tes animaux favoris, participer à des jeux et suivre
+                        ta progression</p>
+					</div>
+					<div id="hand2" class="hand col-sm-12 col-md-4">
+						<img src="{{ asset('assets/images/home/hand2.png') }}" alt="Enrichis-toi">
+						<h4>Enrichis-toi</h4>
+                        <p>Grâce à notre système de carte, retiens plus facilement les informations essentielles sur les
+                        espèces que tu découvre</p>
+					</div>
+					<div id="hand3" class="hand col-sm-12 col-md-4">
+						<img src="{{ asset('assets/images/home/hand3.png') }}" alt="Explore">
+						<h4>Explore</h4>
+                        <p>Amuse-toi à parcourir la carte du monde à la recherche de nouvelles espèces</p>
+					</div>
+				</div>
+				<div id="hands-valid">
+					<a
+						href="{{path('agria_map')}}">
+						{# 							<button id="hands-button" type="button" class="btn btn-primary">Découvre tes animaux <i class="fas fa-chevron-right fs4 p-1"></i></button> #}
+						<button id="hands-button" type="button" class="btn btn-primary">Découvre tes animaux ></button>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact">
+			<div class="container">
+				<div class="row">
+					<div id="background-service" class="col-sm-12 col-md-4">
+						<div id="service">
+							<h4>Service client</h4>
+							<p>Tél : 01 45 12 24 02
+								<br>
+								Du lundi au samedi de 9h à 19h</p>
+							<p>Service client,
+								<br>
+								réservé uniquement aux personnes majeures</p>
+						</div>
+					</div>
+
+					<div id="separator" class="d-none d-xxl-block">
+						<img src="{{ asset('assets/images/home/separateur_vertical.png') }}" alt="">
+					</div>
+
+					<div id="background-logo" class="col-6 offset-2">
+						<div class="row">
+							<div id="help" class="col-10 offset-1">
+								<div class="row">
+									<h5 class="text-center">Besoin d'aide ?</h5>
+									<div class="row">
+									<div id="asterisk-section">
+										<div class="asterisk">
+											<img src="{{ asset('assets/images/home/Icon ionic-md-flower.png') }}" alt="">
+											<p>Une question à propos de nos services ?</p>
+										</div>
+										<div class="asterisk">
+											<img src="{{ asset('assets/images/home/Icon ionic-md-flower.png') }}" alt="">
+											<p>Vous désirez nous faire part de votre experience ?</p>
+										</div>
+										<div class="asterisk">
+											<img src="{{ asset('assets/images/home/Icon ionic-md-flower.png') }}" alt="">
+											<p>Vous souhaitez peut-être devenir contributeur ?</p>
+										</div>
+									</div>
+									<div id="contact-form" class="col-md-8">
+										{{ form_start(form) }}
+										
+										{{ form_widget(form.nom,{'attr': {'placeholder': 'Nom'}})}}
+										{{ form_widget(form.prenom,{'attr': {'placeholder': 'Prénom'}})}}
+										{{ form_widget(form.email,{'attr': {'placeholder': 'Email','type':'email'}})}}
+										{{ form_widget(form.message,{'attr': {'placeholder': 'Mon Message','cols':20,'rows':6}})}}
+										{{ form_widget(form.Enregistrer,{'attr': {'id': 'contact_enregistrer','class': 'form-button btn btn-primary'}})}}
+										
+										{{ form_end(form) }}
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+</section>{% endblock %}

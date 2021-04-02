@@ -1,0 +1,14 @@
+#container-animal {
+  background-image: url('../../images/backgrounds/continents/oceanie.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#continentTitre {
+  color:#EAB25C;
+}
+
+#flecheSvg {
+  fill:#EAB25C;
+}

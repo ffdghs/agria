@@ -1,0 +1,32 @@
+/* body {
+    background: linear-gradient(to bottom, #12c2e9, #c471ed, #f64f59);
+    height: 100vh;
+} */
+
+input {
+    border : #975942 solid 1px;
+  }
+  
+  /* button {
+    border:none;
+    background-color:transparent;
+  } */
+
+
+.search-results {
+    background-color: white;
+    margin-top: 0.25rem;
+    position:absolute;
+    width: 100%;
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius:10px ;
+}
+.search-results p {
+    margin: 0;
+    padding: 0.5rem;
+}
+.search-results p:hover {
+    background-color: #A86149;
+    cursor: pointer;
+    color:#EFC7AF;
+}

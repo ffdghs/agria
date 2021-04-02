@@ -1,0 +1,198 @@
+{% extends "layout.html.twig" %}
+{% if app.request.get('_route') == 'agria_animals_by_continent' %}
+	{% set continentString = app.request.uri|split('=',2)%}
+	{% set continentValue = continentString[1]|replace({'%C3%A9':'é','%20':' '}) %}
+{% endif %}
+{% if app.request.get('_route') == 'agria_animals_diet' %}
+	{% set dietTab = app.request.uri|split('diet/',2)%}
+	{% set diet = dietTab[1] %}
+{% endif %}
+{% if app.request.get('_route') == 'agria_animals_type' %}
+	{% set typeTab = app.request.uri|split('type/',2)%}
+	{% set type = typeTab[1] %}
+	{% set type = type|replace({'%C3%A9':'é','%20':' ','%C3%AA':'ê','%C3%A8':'è'}) %}
+{% endif %}
+{% if app.request.get('_route') == 'agria_animals_by_habitat' %}
+	{% set habitatTab = app.request.uri|split('habitat/',2)%}
+	{% set habitat = habitatTab[1] %}
+	{% set habitat = habitat|replace({'%C3%A9':'é','%20':' ','%C3%AA':'ê'}) %}
+{% endif %}
+{% block style %}
+	{{parent()}}
+	<link href="{{ asset('assets/css/card.css') }}" rel="stylesheet"/>
+	<link href="{{ asset('assets/css/card-verso.css') }}" rel="stylesheet"/>
+	<link href="{{ asset('assets/css/animal.css') }}" rel="stylesheet"/>
+	{% if continentValue is defined %}
+		<link href="{{ asset('assets/css/continent/' ~ continentValue ~ '.css') }}" rel="stylesheet"/>
+	{% else %}
+		<link href="{{ asset('assets/css/continent/monde.css') }}" rel="stylesheet"/>
+	{% endif %}
+
+
+{% endblock %}
+
+{% block content %}
+{% set favorite = false %}
+	{# <div class="container">
+		    <h3>Habitats</h3>
+		    <a class="btn btn-outline-dark" href="{{path('agria_animals')}}">Tous</a>
+		    {% for habitat in habitats %}
+		      <a class="btn btn-outline-dark" href="{{path('agria_animals_by_habitat', {id: habitat.id})}}">{{habitat.namehabitat}}</a>
+		  {% endfor %}
+		  </div>
+		  <div class="container">
+		    <h3>Continents</h3>
+		    {% for continent in continents %}
+		      <a class="btn btn-outline-dark" href="{{path('agria_animals_by_continent', {id: continent.id, 'continentSelected':continent.namecontinent})}}">{{continent.namecontinent}}</a>
+		    {% endfor %}
+		  </div> #}
+	<div id="container-animal">
+		<div class="container mt-5">
+			<div class="d-flex justify-content-between">
+        {% if app.request.get('_route') == 'agria_animals_by_continent' %}
+				<a id="fleche" href="{{path('agria_map')}}">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="41" viewbox="0 0 28 41">
+						<defs>
+							<clipPath id="clip-Plan_de_travail_1">
+								<rect width="28" height="41"/>
+							</clipPath>
+						</defs>
+						<g id="Plan_de_travail_1" data-name="Plan de travail – 1" clip-path="url(#clip-Plan_de_travail_1)">
+							<g id="Forward_arrow_small" data-name="Forward arrow small" transform="translate(57.722 47.132) rotate(180)">
+								<path id="flecheSvg" data-name="Tracé 36" d="M20.274,27.722,0,6.362,6.039,0,20.274,15,34.509,0l6.039,6.362Z" transform="translate(30 47.132) rotate(-90)" fill="#464e25"/>
+							</g>
+						</g>
+					</svg>
+				</a>
+        {% endif %}
+				{% if continentValue is defined %}
+					<h1 id="continentTitre">L'{{continentValue}}</h1>
+				{% endif %}
+				{% if app.request.get('_route') == 'agria_animals_diet' %}
+				<a id="fleche" href="{{path('agria_map')}}">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="41" viewbox="0 0 28 41">
+						<defs>
+							<clipPath id="clip-Plan_de_travail_1">
+								<rect width="28" height="41"/>
+							</clipPath>
+						</defs>
+						<g id="Plan_de_travail_1" data-name="Plan de travail – 1" clip-path="url(#clip-Plan_de_travail_1)">
+							<g id="Forward_arrow_small" data-name="Forward arrow small" transform="translate(57.722 47.132) rotate(180)">
+								<path id="flecheSvg" data-name="Tracé 36" d="M20.274,27.722,0,6.362,6.039,0,20.274,15,34.509,0l6.039,6.362Z" transform="translate(30 47.132) rotate(-90)" fill="#464e25"/>
+							</g>
+						</g>
+					</svg>
+				</a>
+				<h1 id="continentTitre">Les {{diet}}s</h1>
+				{% endif %}
+				{% if app.request.get('_route') == 'agria_animals_type' %}
+				<a id="fleche" href="{{path('agria_map')}}">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="41" viewbox="0 0 28 41">
+						<defs>
+							<clipPath id="clip-Plan_de_travail_1">
+								<rect width="28" height="41"/>
+							</clipPath>
+						</defs>
+						<g id="Plan_de_travail_1" data-name="Plan de travail – 1" clip-path="url(#clip-Plan_de_travail_1)">
+							<g id="Forward_arrow_small" data-name="Forward arrow small" transform="translate(57.722 47.132) rotate(180)">
+								<path id="flecheSvg" data-name="Tracé 36" d="M20.274,27.722,0,6.362,6.039,0,20.274,15,34.509,0l6.039,6.362Z" transform="translate(30 47.132) rotate(-90)" fill="#464e25"/>
+							</g>
+						</g>
+					</svg>
+				</a>
+				{% if type == 'Oiseau' %}
+				<h1 id="continentTitre">Les {{type}}x</h1>
+				{% else %}
+				<h1 id="continentTitre">Les {{type}}s</h1>
+					
+				{% endif %}
+				{% endif %}
+				{% if app.request.get('_route') == 'agria_animals_by_habitat' %}
+				<a id="fleche" href="{{path('agria_map')}}">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="41" viewbox="0 0 28 41">
+						<defs>
+							<clipPath id="clip-Plan_de_travail_1">
+								<rect width="28" height="41"/>
+							</clipPath>
+						</defs>
+						<g id="Plan_de_travail_1" data-name="Plan de travail – 1" clip-path="url(#clip-Plan_de_travail_1)">
+							<g id="Forward_arrow_small" data-name="Forward arrow small" transform="translate(57.722 47.132) rotate(180)">
+								<path id="flecheSvg" data-name="Tracé 36" d="M20.274,27.722,0,6.362,6.039,0,20.274,15,34.509,0l6.039,6.362Z" transform="translate(30 47.132) rotate(-90)" fill="#464e25"/>
+							</g>
+						</g>
+					</svg>
+				</a>
+				<h1 id="continentTitre">Habitat : {{habitat}}</h1>
+				{% endif %}
+			</div>
+			<div class="row g-0">
+				<div class="flex">
+					{% for animal in animals %}
+						<div class="card-recto" data-animal="{{animal.nameanimal}}">
+							{% if app.user %}
+								{% for favanimal in app.user.favoriteanimaluser %}
+									{% if favanimal.id == animal.id %}
+										{% set favorite = true %}
+									{% endif %}
+								{% endfor %}
+								{% if favorite == true %}
+										<i class="fas fa-heart heart-recto" data-animal="{{animal.id}}"></i>
+										{% set favorite = false %}
+								{% else %}
+										<i class="far fa-heart heart-recto" data-animal="{{animal.id}}"></i>			
+								{% endif %}
+							{% endif %}
+							<img class="img-recto" src="{{asset('assets/images/animal/')}}{{animal.mainPictureAnimal}}" alt="{{animal.nameanimal}}">
+							<h3 class="title-recto" data-bs-target="#card-verso" data-bs-toggle="modal" data-animal="{{animal.nameanimal}}">{{animal.nameanimal}}</h3>
+							<button class="btn-recto" data-bs-target="#card-verso" data-bs-toggle="modal" data-animal="{{animal.nameanimal}}">En savoir plus</button>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade show" id="card-verso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="card-verso modal-content">
+				<div class="card-verso-main">
+					<h2></h2>
+					<img class="img-verso" src="" alt="">
+					<img class="img-verso-mirror" src="" alt="">
+					<div id="flex-main" class="d-flex flex-column justify-content-between">
+						<p class="paragraph1"></p>
+						<p class="paragraph2"></p>
+						<div class="card-verso-pictos d-flex justify-content-around">
+							<div class="pictos d-flex flex-column align-items-center">
+								<img id="imgDiet" src="" alt="" class="pictos-img">
+								<p id="diet"></p>
+							</div>
+							<div class="pictos d-flex flex-column align-items-center">
+								<p id="population"></p>
+								<p id="status"></p>
+							</div>
+							<div class="pictos d-flex flex-column align-items-center">
+								<img id="imgContinent" src="{{asset('assets/svg/other/card-verso/afrique.svg')}}" alt="" class="pictos-img">
+								<p id="continents">AFRIQUE</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-verso-footer">
+					<h3>Découvre d'autres animaux</h3>
+					<div class="similar-animals d-flex justify-content-around">
+						<img src="{{asset('assets/images/animal/mandrill.jpg')}}" alt="">
+						<img src="{{asset('assets/images/animal/tigre.jpg')}}" alt="">
+						<img src="{{asset('assets/images/animal/orangoutan.jpg')}}" alt="">
+						<img src="{{asset('assets/images/animal/koala.jpg')}}" alt="">
+					</div>
+				</div>
+				<a href="" id="lien-animal" class="btn btn-card-verso d-flex justify-content-center"><img src="{{asset('assets/svg/other/card-verso/plus.svg')}}" alt=""></a>
+			</div>	
+		</div>
+	</div>
+{% endblock %}
+
+{% block script %}
+	{{parent()}}
+	<script src="{{asset('assets/js/animal.js')}}"></script>
+{% endblock %}

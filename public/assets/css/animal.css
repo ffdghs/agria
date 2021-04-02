@@ -1,0 +1,41 @@
+h1 {
+  text-align: center;
+}
+
+.flex {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width:99%;
+}
+
+/* .card-recto:nth-child(4n) {
+  margin-right:0;
+}
+.card-recto:nth-child(4n+1) {
+  margin-left:0;
+} */
+
+#continentTitre {
+  font-family:Bakso Sapi;
+  font-size: 4rem;
+  margin-top:2rem;
+  margin-bottom:2rem;
+  display:block;
+  width:100%;
+}
+
+#fleche {
+  align-self: center;
+}
+
+#container-animal {
+  margin-top:5rem;
+}
+
+.card-recto:hover {
+  transform: scale(1.5);
+  object-position: center;
+  transition: transform 0.5s;
+}

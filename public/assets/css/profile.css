@@ -1,0 +1,357 @@
+h1{
+    font-family:Bakso Sapi;
+    color: #A86149;
+    font-size: 35px;
+}
+
+h2{
+    font-family:Bakso Sapi;
+    color: #386284;
+    font-size: 30px;
+}
+
+span{
+    font-family:Bakso Sapi;
+    color: #386284;
+    font-size: 30px;
+}
+
+h3{
+    font-family:Bakso Sapi;
+    color: #A86149;
+    font-size: 18px;
+   
+}
+
+h4{
+   font-family:"Open Sans";
+   color: rgb(15, 41, 15);
+   font-size: 50px;
+   font-weight: bold;
+
+}
+
+#favs,#settings,#time,#progression p{
+    font-family:Bakso Sapi;
+    color: #EAB25C;
+    font-size: 12px;
+}
+
+
+/* CSS CARD PROFILE */
+#profile-card{
+    background-color: rgb(244, 229, 200);
+    width: 260px;
+    height: 380px;
+    margin-top: 5px;
+    border-radius: 10px;
+    position: fixed;
+}
+
+#profile-card h2{
+   font-size: 15px;
+}
+
+#profile-card h1,#progress,#level{
+   text-align: center;
+}
+
+#settings {
+   margin-left: 350px;
+}
+
+#settings .row {
+   margin-left: 15%;
+   width: 60%;
+}
+
+#settings .kids {
+   margin-left: 100px;
+   margin-top: 80px;
+   width: 250px;
+}
+
+#settings p {
+   text-align: center;
+   font-size: 16px;
+}
+
+#avatar{
+    width: 150px;
+    margin-top: -70px;
+    margin-left: 28px; 
+}
+
+#level h2{
+   margin-top: -20px;
+}
+
+#mon-niveau{
+   width: 100px;
+   margin-top: -30px;
+}
+
+#profile-card h1{
+   margin-top: -25px;
+} 
+
+#profile-card p{
+    font-family:Alatsi;
+    color: #A86149;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+
+ /* CSS Favories */
+ #favs{
+    margin-top: 20px;
+ }
+
+ #favs-animal {
+    margin-left: 280px;
+ }
+
+
+/* Card favoris */
+.card-recto {
+   margin-left: 0 !important;
+   margin-right: 0 !important;
+}
+
+ /* .card-recto {
+   width:257px;
+   height:294px;
+   border-radius:10px;
+   box-shadow: 0px 0px 10px grey;
+   position: relative; 
+   margin-right:1rem;
+   margin-left:2.5rem;
+   margin-bottom:8rem;
+   transform: scale(1);
+   object-position: center;
+   transition: transform 0.5s;
+ }
+
+ .btn-recto {
+   background-color: #EAB25B;
+   color:#F4E3C5;
+   border-radius:50px;
+   font-weight: bold;
+   border:none;
+   height:30px;
+   width:150px;
+   position: absolute;
+   bottom:-15px;
+   left:50px;
+   box-shadow: 0px 0px 10px grey;
+   z-index: 4;
+   padding:2px 0 5px 0;
+ }
+
+ .heart-recto {
+   position:absolute;
+   right:10px;
+   top:10px;
+   font-size: 20px;
+   color:#EEDFC2;
+   z-index: 3;
+ }
+ 
+ .fas.fa-heart {
+   color:rgb(169, 44, 44);
+ }
+ 
+ .title-recto {
+   color:white;
+   position: absolute;
+   bottom:20px;
+   left:0;
+   text-align: center;
+   width:100%;
+   font-size: 2rem;
+   display:block;
+   font-family:Bakso Sapi;
+ }
+ 
+ .img-recto {
+   height:100%;
+   width:100%;
+   border-radius:10px;
+ } */
+
+/* CSS Modification du profile */
+#editprofile_name_user, #editprofile_email_user , #editprofile_login_user {
+   border-radius: 30px;
+   border: 2px solid #A86149;
+}
+ input{
+    font-family:"Open Sans";
+    color: #f4e5c8;
+    background-color: white;
+    /* border: #A86149 solid 1px; */
+    /* border-radius: 5px; */
+    display: block;
+    width: 450px;
+    height: 40px;
+    margin-top: 5px;
+    padding-left: 15px;
+ }
+
+ .form-check-label {
+    color: #EAB25B;
+ }
+
+ #editprofile_id_avatar_user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+ }
+
+.img-avatar img {
+   width: 20%;
+} 
+
+ label, .col-form-label {
+   color: #A86149;
+ }
+
+ .button {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .btn-edit, #editprofile_Valider{
+   font-family:Bakso Sapi;
+   background-color: #EAB25B;
+   color:white;
+   border-radius:50px;
+   font-size: 12px;
+   border:none;
+   width:200px;
+   height:30px;
+   text-align: center;
+   text-decoration:none; 
+ }
+
+ .mdp{
+   padding-top: 6px;
+ }
+
+.btn-edit:hover{
+   color:#A86149;
+}
+
+
+/* CSS Temps  */
+#time{
+   margin-top: 50px;
+}
+
+#time .row {
+   margin-left: 45px;
+}
+
+  .tmpsconnection{
+    margin-top: 50px;
+
+  }
+
+  #total-time{
+      text-align: center;
+  }
+
+  #total-time img{
+    width: 60px;
+    margin-top: 15px;
+
+ }
+
+ #total-time p{
+    margin-top: 35px;
+ }
+
+ #current-time{
+    text-align: center;
+ }
+
+ #current-time img{
+    width: 90px;
+    margin-top: 5px;
+ }
+
+ #current-time p{
+    margin-top: 22px;
+ }
+
+ #trait{
+   margin-top: -50px;
+   margin-left: 20px;
+   height: 300px;
+}
+
+
+ /* CSS Progress */
+ #progression{
+    margin-top: 50px;
+ }
+
+ #progression .titre {
+   margin-left: 45px;
+ }
+
+ #progression .progress-center {
+   /* border: 2px solid #A86149; */
+   margin-right: 8%;
+ }
+
+ .progress-item{
+    text-align: center;
+    margin-top: 30px;
+ }
+
+ .progress-item h4{
+  margin-bottom: 30px;
+  color: rgb(40, 67, 40);
+}
+
+.progress-item h3{
+   margin-bottom: 50px;
+ }
+
+#expert{
+   width: 100px;
+   margin-bottom: 30px;
+
+ }
+
+ #curve{
+   width: 70px;
+   text-align: center;
+   margin-bottom: 20px;
+ }
+
+ .training{
+   text-align: end;
+   margin: 30px 0 100px 0;
+ }
+
+ #training{
+   font-family:Bakso Sapi;
+   background-color: #A86149;
+   color: rgb(244, 229, 200);
+   text-decoration: none;
+   padding: 10px;
+   border-radius: 10px;
+ }
+
+ .training img{
+   width: 65px;
+   margin: -30px 0 0 30px
+ }
+
+
+
+
+

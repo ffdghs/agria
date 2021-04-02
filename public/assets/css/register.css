@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "Bakso Sapi";
+    src: url(../font/BaksoSapi.otf);
+}
+
+@font-face {
+    font-family: "Alatsi";
+    src: url(../font/Alatsi-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../font/OpenSans-Regular.ttf);
+}
+
+h1, h2{
+    font-family:Bakso Sapi;
+    color: #EAB25C;
+    font-size: 40px;
+}
+
+h3{
+    font-family:Bakso Sapi;
+    color: #A86149;
+    font-size: 19px;
+}
+
+article p {
+    font-size: 16px;
+    color: #386284;
+}
+
+
+label{
+    font-family: "Alatsi";
+    font-size: 16px;
+    color: #A86149;
+}
+
+.condi label{
+    font-size: 10px;
+    color: #A86149;
+}
+
+#parents{
+    width: 55%;
+}
+
+#separator {
+    width: 3px;
+    margin: 15% auto;
+}
+
+#registration_form_login_user, #registration_form_email_user, #registration_form_plainPassword_first, #registration_form_plainPassword_second, #input{
+    border-radius: 30px;
+    border: 2px solid #A86149;
+}
+
+.eye{
+    padding: 6px;
+    position: fixed;
+    border-radius: 30px;
+    border: 2px solid #A86149;
+}
+
+.icon{
+    color: #A86149;
+}
+
+#inscription{
+    margin-left: 5%;
+}
+
+.button{
+    font-family: "Bakso Sapi", serif !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.btn-jaune {
+    background-color: #EAB25C;
+    color: white;
+}
+
+.btn:hover{
+    color: #A86149;
+}
+
+#btn{
+    z-index: 10;
+}
+
+/* #iconmdp{
+    color: #A86149;
+} */
+
+.shadow{
+    box-shadow: 10px 5px 5px;
+}
+
+#creer{
+    margin: 5px;
+    width: 100%;
+    border-radius: 30px;
+    border: 2px solid #A86149;
+    background-color: white;
+    color: #A86149;
+}
+
+#creer:hover {
+    background-color: #EAB25C;
+    color: #A86149;
+}
+
+a:hover {
+    color: white;
+}

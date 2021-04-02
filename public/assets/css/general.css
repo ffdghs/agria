@@ -1,0 +1,214 @@
+/* * {
+    margin: 0 auto;
+} */
+
+@font-face {
+    font-family: "Bakso Sapi";
+    src: url(../font/BaksoSapi.otf);
+}
+
+@font-face {
+    font-family: "Alatsi";
+    src: url(../font/Alatsi-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../font/OpenSans-Regular.ttf);
+}
+
+/************* Style du HEADER*************/
+header {
+    background-color: #386284;
+    font-family: "Bakso Sapi", serif;
+}
+
+nav {
+    color: #fff;
+}
+
+.btn-connect:hover {
+    color:#1B4A6F !important;
+}
+
+.navbar-brand {
+    margin-right: 12rem;
+}
+
+.navbar-nav {
+    padding-left: 413px;
+}
+
+.nav-item {
+    padding-left: 1rem;
+}
+/************* effet hover menu **********/
+.nav-item a{
+	display: var(--rLinkDisplay, inline-flex) !important;
+}
+
+.nav-item a[href]{
+	color: var(--rLinkColor) !important;
+	text-decoration: var(--rLinkTextDecoration, none) !important;
+}
+
+.active{
+
+
+    --uiTextUnderlinedLineHeight: var(--textUnderlinedLineHeight, 2px); /* 1 */
+    --uiTextUnderlinedLineGap: var(--textUnderlinedLineGap, .5rem);
+    --uiTextUnderlinedPaddingBottom: calc(var(--uiTextUnderlinedLineHeight) + var(--uiTextUnderlinedLineGap));
+
+    padding-bottom: var(--uiTextUnderlinedPaddingBottom) !important;
+    position: var(--textUnderlinedPosition, relative) !important;
+		z-index: var(--textUnderlinedZindex, 1) !important;
+}
+
+.active::after{
+    content: "";
+    width: var(--textUnderlinedLineWidht, 100%) !important;
+    height: var(--uiTextUnderlinedLineHeight) !important;
+		background-image: var(--textUnderlinedBackgroundImage, linear-gradient(to top, var(--textUnderlinedLineColor, currentColor) 30%, rgba(255, 255, 255, 0) 45%)) !important;
+
+    position: absolute;
+    left: var(--textUnderlinedLineLeft, 0) !important;
+    bottom: var(--textUnderlinedLineBottom, 0) !important;
+		z-index: var(--textUnderlinedLineZindex, -1) !important;
+}
+
+/*
+=====
+Corps 
+=====
+*/
+
+.active{
+	--textUnderlinedLineHeight: 20%;
+	--textUnderlinedLineGap: 0;
+    --textUnderlinedLineColor: #ffffff;
+    --textUnderlinedLineWidht: 0;
+	/* gérer la longueur du trait (0 aucun, 100 = toute la longueur) */
+	padding-left: .75rem;
+	padding-right: .75rem;
+}
+
+.active::after{
+	will-change: width;
+	transition: width .1s ease-out;
+	transform: rotate(0deg);
+	transform-origin: left bottom;
+}
+
+.active:hover{
+    --textUnderlinedLineWidht: 100%;
+    /* gérer la longueur du trait (0 aucun, 100 = toute la longueur) */
+}
+
+.active:hover::after{
+	transition-duration: .15s;
+}
+/* .nav-item a {
+    
+    text-decoration:none; 
+    color: white;
+    
+} */
+
+
+.profil img {
+    width: 50%;
+}
+
+.dropdown-menu {
+    padding: 4%;
+}
+
+.dropdown-menu a{
+    color: #386284;
+}
+
+.dropdown-menu a:hover{
+    background-color: #386284;
+    color: white;
+}
+
+/* .dropdown-toggle::before ,.dropdown-toggle::after {
+    display: none;
+} */
+
+/* .fa-caret-down{
+    width: 180px;
+} */
+
+
+/************* Style du MAIN*************/
+
+/* main div {
+    text-align: right;
+} */
+
+footer img {
+    width: 50px;
+    /* height:100px; */
+    position: relative;
+    top:-70px;
+}
+
+/************* Style du FOOTER***********/
+.footer-item-content a:hover {
+    color:#EAB25B;
+}
+
+footer {
+    background-color: #386284;
+    font-family: "Alatsi", sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#footer-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-item {
+    width: 30%;
+    display:flex;
+    flex-direction: column;
+}
+
+#copyright {
+    padding-top: 10rem;
+}
+
+/************* CSS MEDIA QUERIES***********/
+
+@media screen and (max-width: 375px) {
+    main div {
+        text-align: center;
+    }
+    
+    #footer-logo {
+        text-align: center;
+    }
+    
+    #footer-nav {
+        padding-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-item{
+        text-align: center;
+        width: 70%;
+    }
+
+    #copyright {
+        padding-top: 1rem;
+    }
+}

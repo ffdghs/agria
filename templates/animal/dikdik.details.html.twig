@@ -1,0 +1,146 @@
+{% extends "layout.html.twig" %}
+
+{% block style %}
+  {{parent()}}
+  <link href="{{ asset('assets/css/animal-details.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% set favorite = false %}  
+
+{% block content %}
+  <section id="title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <a href="{{path('agria_map')}}"><img src="{{asset('assets/images/animal/animal-details/gorille/arrow.png')}}" alt="fleche" class="img-fluid"></a>
+                    </div>
+                    <div class="col-8 text-center">
+                        <h1>Le Dik Dik</h1>
+                    </div>
+                    <div class="col-2 align-self-center d-flex justify-content-center">
+                        {% if app.user %}
+                            {% for favanimal in app.user.favoriteanimaluser %}
+                                {% if favanimal.id == 7 %}
+                                    {% set favorite = true %}   
+                                {% endif %}
+                            {% endfor %}
+                            {% if favorite == true %}
+                                <i class="fas fa-heart heart-recto" data-animal="7"></i>
+                                {% set favorite = false %}
+                                {% else %}
+                                <i class="far fa-heart heart-recto" data-animal="7"></i>			
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="history">
+            <div class="container">
+                <div id="history-fill">
+                    <div class="row">
+                        <div id="history-content" class=" col-sm-12 col-md-6">
+                            <h2>Bref résumé</h2>
+                            <p>Les dik-diks (du genre Madoqua) sont des antilopes naines, qui mesurent, à l’épaule, de 30 à 43 cm. Le nom « dik-dik » vient du bruit qu’ils font lorsqu’ils sont en danger. Les dik-diks pèsent de 3 à 5 kg. Ils sont dotés d’un museau allongé, d’une légère fourrure qui est grise sur le dos et blanche au niveau du ventre. Sur le haut du crâne, le pelage forme une touffe droite, qui cache parfois partiellement les cornes courtes du mâle. Ces derniers ont des cornes assez courtes, qui mesurent 3 à 7,5 cm, inclinées vers l’arrière. Les femelles sont légèrement plus larges que les mâles. </p>
+                            <p>La tête du dik-dik semble parfois disproportionnée par rapport au petit corps de l’animal. Le haut du corps est gris-brun, alors que la partie ventrale et les pattes sont brun clair. Beaucoup de dik-diks arborent un anneau de couleur pâle autour de l’œil. Le dik-dik de Swayne est le plus petit de tous.</p>
+                        </div>
+                        <div class="animal-content col-md-6">
+                            <img class="img-fluid" src="{{asset('assets/images/animal/animal-details/dikdik/dikdik_top.png')}}" alt="Un peu d'histoire">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="icon-section col-5 offset-md-4">
+                    <div class="row">
+                        <div class="icon-item col-md-4 align-items-center">
+                            <img src="{{asset('assets/images/animal/animal-details/dikdik/téléchargement.png')}}" alt="Dik-Dik de Salt">
+                            <p>Dik-Dik de Salt</p>
+                        </div>
+                        <div class="icon-item col-md-4 align-items-center">
+                            <img src="{{asset('assets/images/animal/animal-details/dikdik/joshua-j-cotten-0eSD7rA4E8o-unsplash.png')}}" alt="Dik Dik de Kirk">
+                            <p>Dik Dik de </br> Kirk </p>
+                        </div>
+                        <div class="icon-item col-md-4 align-items-center">
+                            <img src="{{asset('assets/images/animal/animal-details/dikdik/joshua-j-cotten-1.png')}}" alt="Dik Dik de Kirk">
+                            <p>Dik Dik argenté</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habitat">
+            <div class="container">
+                <div id="habitat-fill">
+                    <div class="row">
+                        <div class="animal-content col-md-6"><img class="img-fluid"
+                                src="{{asset('assets/images/animal/animal-details/dikdik/dikdik_middle.png')}}" alt=""></div>
+                        <div id="habitat-content" class="col-md-6">
+                            <h2>Leur habitat</h2>
+                            <p>Les dik-diks vivent principalement en Afrique de l’est. Ils préfèrent les habitats où l’herbe et les arbustes comestibles sont abondants ; toutefois leur met favori est le feuillage. Ils vivent dans de grandes plaines parmi d’autres herbivores comme les girafes et les antilopes. Ils peuvent aussi vivre dans des forêts denses, mais ils nécessitent une bonne couverture contre les prédateurs, et une faible quantité de grandes plantes. En effet, ils se déplacent dès que l’herbe devient trop grande et les empêche de voir. Ils doivent aussi disposer de cachettes, afin d’échapper aux prédateurs. Ils vivent habituellement en couple sur un territoire de 
+                            0,05 km². Ils profitent des pistes créées par l’humain pour bloquer les autres dik-diks, spécialement les femelles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon-section col-5 offset-md-4">
+                    <div class="row">
+                        <div class="icon-item col-md-4 align-items-center">
+                            <img src="{{asset('assets/images/animal/animal-details/dikdik/boudhayan-bardhan-60tataLkJ0U-unsplash.png')}}" alt="Montagne Luxuriante">
+                            <p>Montagne Luxuriante</p>
+                        </div>
+                        <div class="icon-item col-md-4 align-items-center">
+                            <img src="{{asset('assets/images/animal/animal-details/dikdik/téléchargement (1).png')}}" alt="Grande Plaine">
+                            <p>Grande Plaine</p>
+                        </div>
+                        <div class="icon-item col-md-4 align-items-center">
+                            <img src="{{asset('assets/images/animal/animal-details/dikdik/boudhayan-bardhan-1.png')}}" alt="Continent Africain">
+                            <p>Continent Africain</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="food">
+            <div class="container">
+                <div id="food-fill">
+                    <div class="row">
+                        <div id="food-content" class="col-md-6">
+                            <h2>Leur nourriture</h2>
+                            <p>Le dik-dik habite dans les zones broussailleuses de la savane, plus précisément en Afrique de l’Est (Somalie, Kenya et Tanzanie) et en Afrique du Sud (Namibie et Angola). Ces animaux vivent territorialement en couples monogames avec leur descendance, bien que celle-ci devra quitter tôt le groupe.</p>
+
+                            <p>Ils sont timides et fuyants, et se cachent dans les buissons. Face à un danger, ils courent très vite, sautent et réalisent des mouvements en zigzag. Ils émettent également des sons qui ressemblent à « zik-zik » ou « dik-dik » (appel d’alerte).</p>
+
+
+                            <p>Cet animal est herbivore. Il s’alimente de matière végétale facile à digérer et contenant peu de fibre. 80 % de son alimentation se compose de feuilles d’arbres et d’arbustes, 17 % provient de pâturages et le reste d’herbe et de joncs. Il s’alimente généralement aux premières heures du jour ou au coucher du soleil.
+                            </p>
+                        </div>
+                        <div class="animal-content col-md-6"><img class="img-fluid"
+                                src="{{asset('assets/images/animal/animal-details/dikdik/dikdik_bottom.png')}}" alt="dikdik"></div>
+                    </div>
+                </div>
+                <div class="icon-section col-5 offset-md-4">
+                    <div class="row">
+                        <div class="icon-item col-md-4 align-items-center">
+                            <img src="{{asset('assets/images/animal/animal-details/dikdik/grass-3081622_960_720.png')}}" alt="Herbes">
+                            <p>Herbes</p>
+                        </div>
+                        <div class="icon-item col-md-4 align-items-center">
+                            <img src="{{asset('assets/images/animal/animal-details/dikdik/joshua-j-cotten-2.png')}}" alt="Feuilles">
+                            <p>Feuilles</p>
+                        </div>
+                        <div class="icon-item col-md-4 align-items-center">
+                            <img src="{{asset('assets/images/animal/animal-details/dikdik/jonc-des-chaisiers.png')}}" alt="Jonc">
+                            <p>Jonc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}
+
+{% block script %}
+{{parent()}}
+<script src="{{asset('assets/js/details.js')}}"></script>
+{% endblock %}

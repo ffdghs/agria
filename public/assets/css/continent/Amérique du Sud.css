@@ -1,0 +1,14 @@
+#container-animal {
+  background-image: url('../../images/backgrounds/continents/amsud.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#continentTitre {
+  color:#464E25;
+}
+
+#flecheSvg {
+  fill:#464E25;
+}

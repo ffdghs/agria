@@ -1,0 +1,200 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}User
+{% endblock %}
+
+{% block style %}
+	{{parent()}}
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+	<link rel="stylesheet" href="{{ asset('assets/css/profile.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/css/card.css') }}">
+	<link href="{{ asset('assets/css/card-verso.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+	<section id="favs">
+		<div class="container">
+			<div class="row">
+				<div class="col-2 text-center" id="profile-card">
+					{% if app.user.idavataruser.urlavatar is defined %}
+						<img src="{{asset("assets/images/avatar/")}}{{app.user.idavataruser.urlavatar}}" alt="">
+					{% else %}
+						<img src="{{ asset('assets/images/avatar/kevin.png') }}" alt="">
+					{% endif %}
+					<h1>{{app.user.loginuser}}</h1>
+					<div id="progress">
+						<h2>Ma progression</h2>
+						<p>90%</p>
+					</div>
+					<div id="level">
+						<h2>Mon niveau</h2>
+						<img id="mon-niveau" src="{{ asset('assets/images/icons/expert.png') }}" alt="">
+					</div>
+
+				</div>
+
+
+				{% if app.user.favoriteanimaluser is empty%}
+
+					{% else %}
+						<div class="col-10 " id="favs-animal">
+							<h1>Ma séléction d'animaux</h1>
+							{# <div class="row"> #}
+							<div class="col s12 m12 d-flex direction-row flex-wrap justify-content-between">
+								{% for animal in app.user.favoriteanimaluser %}
+									<div class="card-recto" data-animal="{{animal.nameanimal}}">
+										<i class="fas fa-heart heart-recto" data-animal="{{animal.id}}"></i>
+										<img class="img-recto" src="{{asset('assets/images/animal/')}}{{animal.mainpictureanimal}}" alt="">
+										<h3 class="title-recto" data-bs-target="#card-verso" data-bs-toggle="modal" data-animal="{{animal.nameanimal}}">{{animal.nameanimal}}</h3>
+										<button class="btn-recto" data-bs-target="#card-verso" data-bs-toggle="modal" data-animal="{{animal.nameanimal}}">En savoir plus</button>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+				{% endif %}
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="settings">
+	<div class="row">
+		{# <div class="col-2"></div> #}
+		<div class="col-6 modif">
+			<h1>Réglages</h1>
+			<p>Modifier mes informations</p>
+
+			<div
+				class="form-modif">
+				{# {{ form(form) }} #}
+				{{ form_start(form) }}
+				{{ form_row(form.login_user, {
+				})}}
+				{{ form_row(form.email_user, {
+				})}}
+				{{ form_row(form.name_user, {
+				})}}
+				{{ form_row(form.id_avatar_user, {
+				})}}
+				
+			</div>
+			<div class="img-avatar d-flex justify-content-center">
+				{% for item in avatar %}
+					<img src="{{ asset('assets/images/avatar/') }}{{item.urlavatar}} " alt="">
+				{% endfor %}
+			</div>
+			<div class="button">
+				<a href="{{path('user_edit_pass')}}" class="btn-edit mdp">Modifier le mot de passe</a>
+				{{ form_row(form.Valider, {
+				})}}
+				{{ form_end(form) }}
+			</div>
+
+		</div>
+		<div class="col-2 mt-5">
+			<img class="kids" src="{{ asset('assets/images/icons/kids.png') }}" alt="">
+		</div>
+	</div>
+</section>
+
+<section id="time">
+<div class="container">
+<div class="row">
+	<div class="col-2"></div>
+	<div class="col-10 #connect">
+		<h1>Temps de connexion</h1>
+	</div>
+
+	<div class="row tmpsconnection">
+		<div class="col-2"></div>
+		<div class="col-4">
+			<div id="total-time">
+				<div>
+					<span id="display-hours">00</span>
+					<span>
+						heures</span>
+				</div>
+				<img id="clock" src="{{ asset('assets/images/icons/clock-total.png') }}" alt="">
+				<p>Temps de connexion depuis mon inscription</p>
+			</div>
+		</div>
+		<div class="col-1">
+			<img id="trait" src="{{ asset('assets/images/icons/séparateur_vertical.png') }}" alt="">
+		</div>
+		<div class="col-4" id="current-time">
+			<div>
+				<span id="display-area">00:00:00</span>
+			</div>
+			<img src="{{ asset('assets/images/icons/clock.png') }}" alt="">
+			<p>Durée de ma session en cours</p>
+		</div>
+	</div>
+</div></section><section id="progression">
+<div class="container">
+	<div class="row titre">
+		<div class="col-2"></div>
+		<div class="col-10">
+			<h1>Ma progression</h1>
+			<p>Je continue à m'entrainer pour m'améliorer !</p>
+		</div>
+	</div>
+	<div class="row progress-center">
+		<div class="col-3"></div>
+		<div class="col-3 progress-item">
+			<h4>90%</h4>
+			<h3>Mon score</h3>
+		</div>
+		<div class="col-3 progress-item">
+			<img id="expert" src="{{ asset('assets/images/icons/expert.png') }}" alt="">
+			<h3>Mon niveau</h3>
+		</div>
+		<div class="col-3 progress-item">
+			<img id="curve" src="{{ asset('assets/images/icons/progress_curve.png') }}" alt="">
+			<h3>Ma courbe de progression</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="training">
+			<a id="training" href="{{path('agria_jeux')}}">Je joue pour m'entrainer</a>
+			<img src="{{ asset('assets/images/icons/profile_arrow.png') }}" alt="">
+		</div>
+	</div>
+</div></section><div class="modal fade show" id="card-verso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+	<div class="card-verso modal-content">
+		<div class="card-verso-main">
+			<h2></h2>
+			<img class="img-verso" src="" alt="">
+			<img class="img-verso-mirror" src="" alt="">
+			<div id="flex-main" class="d-flex flex-column justify-content-between">
+				<p class="paragraph1"></p>
+				<p class="paragraph2"></p>
+				<div class="card-verso-pictos d-flex justify-content-around">
+					<div class="pictos d-flex flex-column align-items-center">
+						<img id="imgDiet" "" alt="" class="pictos-img">
+						<p id="diet"></p>
+					</div>
+					<div class="pictos d-flex flex-column align-items-center">
+						<p id="population"></p>
+						<p id="status"></p>
+					</div>
+					<div class="pictos d-flex flex-column align-items-center">
+						<img src="{{asset('assets/svg/other/card-verso/afrique.svg')}}" alt="" class="pictos-img">
+						<p>AFRIQUE</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-verso-footer">
+			<h3>Découvre d'autres animaux</h3>
+			<div class="similar-animals d-flex justify-content-around">
+				<img src="{{asset('assets/images/animal/mandrill.jpg')}}" alt="">
+				<img src="{{asset('assets/images/animal/tigre.jpg')}}" alt="">
+				<img src="{{asset('assets/images/animal/orangoutan.jpg')}}" alt="">
+				<img src="{{asset('assets/images/animal/koala.jpg')}}" alt="">
+			</div>
+		</div>
+		<a id="lien-animal" href="" class="btn btn-card-verso d-flex justify-content-center"><img src="{{asset('assets/svg/other/card-verso/plus.svg')}}" alt=""></a>
+	</div>
+</div></div></main>{% endblock %}{% block script %}{{parent()}}<script src="{{asset('assets/js/timer.js')}}"></script><script src="{{asset('assets/js/user.js')}}"></script>{% endblock %}

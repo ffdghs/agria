@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "Bakso Sapi";
+    src: url(../font/BaksoSapi.otf);
+}
+
+@font-face {
+    font-family: "Alatsi";
+    src: url(../font/Alatsi-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../font/OpenSans-Regular.ttf);
+}
+
+
+
+body {
+    background-color: #EAE3DC;
+}
+
+.img img {
+    margin-top: -145px;
+    margin-left: 190px;
+    position: absolute;
+    z-index: 100;
+    width: 73%;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-family: "Bakso Sapi";
+    color: #386284;
+}
+
+h3 {
+    padding: 15%;
+    font-size: 35px;
+}
+
+h1, h3 {
+    font-family: "Bakso Sapi";
+    color: #A86149;
+}
+
+p{
+    font-family: "Alatsi", sans-serif;
+    color: #386284;
+    font-size: 16px;
+}
+
+.card {
+    background-color:white;
+    border-radius: 30px;
+    width: 30%;
+    height: 425px;
+    margin: 95px 170px;
+    z-index: 50;
+}
+
+/* .container {
+    border: 1px solid blue;
+} */
+
+.title {
+    width: 28%;
+    height: 450px;
+    margin: 68px 105px;
+}
+
+.title .info {
+    margin-top: 45%;
+}
+
+.title h2, .title p {
+    font-size: 28px;
+}
+
+.btn {
+    background-color: #EAB25C;
+    font-family: "Bakso Sapi";
+    border-radius: 30px;
+    margin-top: 5%;
+    color: white;
+    width: 200px;
+}
+
+.button a button:hover {
+    color: #A86149;
+}

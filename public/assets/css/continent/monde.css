@@ -1,0 +1,6 @@
+#container-animal {
+  background-image: url('../../images/backgrounds/continents/Monde.png');
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+}

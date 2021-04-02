@@ -1,0 +1,56 @@
+h1 {
+    color: #99B9BE;
+    font-family: "Bakso Sapi";
+    text-align: center;
+    margin-top: 50px;
+    font-size: 80px;
+}
+
+h2 {
+    color: #99B9BE;
+    font-family: "Bakso Sapi";
+    font-size: 100px;
+    text-align: center;
+    margin-top: 120px;
+}
+
+h3 {
+    color: #A86149;
+    font-family: "Alatsi";
+    font-size: 45px;
+}
+
+#education p, #values p {
+    color: #A86149;
+    font-family: "Alatsi";
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+#education{
+    margin-top: 100px;
+}
+
+#education img, #values img {
+    height: 60%;
+}
+
+#values img {
+    margin-left: 55px;
+}
+
+#team {
+    margin-top: -70px;
+}
+
+#picto-bar {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#picture img {
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+}
+

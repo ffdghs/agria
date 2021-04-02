@@ -1,0 +1,518 @@
+/***********CSS TITRES + TEXTE **********/
+
+h1, h2 {
+    font-family: "Bakso Sapi", sans-serif;
+    color: white!important;
+    margin-bottom: 30px;
+}
+#hands h2 {
+    color: #A86149;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 100px;
+    letter-spacing: 3px;
+}
+
+/* h1 {
+    text-align: right!important;
+} */
+
+h3  {
+    font-family: "Alatsi", sans-serif;
+}
+
+h4 {
+    font-family: "Bakso Sapi", serif;
+    color: #A86149;
+}
+
+h5 {
+    font-family: "Bakso Sapi", serif;
+    color: #A86149;
+    margin-bottom: 50px;
+}
+main a {
+    text-decoration:none;
+    color: white;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+}
+
+/**********CSS IMAGE DE COUVERTURE ********/
+
+#cover-section {
+    background-image: url(../images/home/joel-herzog-105060-e1491962640153.jpeg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+    opacity: 82%;
+    height: 760px;
+}
+
+#cover-section span {
+    color: #F0E1C3;
+    font-size: 5rem;
+}
+
+#cover-content {
+    padding-top: 300px;
+    text-align: center;
+    margin-right: 5px;
+    width: 50%;
+}
+
+#cover-button {
+    font-family: "Bakso Sapi", sans-serif;
+    background-color: #1B4A6F;
+    color: #fff;
+    padding: 8px 35px 8px 50px;
+    border: none;
+    border-radius: 5px;
+    word-spacing: 15px;
+}
+
+#cover-section button:hover {
+    background-color: #fff;
+    color: #1B4A6F;
+} 
+button#cover-button.btn.btn-primary{
+    padding-right: 28px;
+    padding-left: 26px;
+}
+
+/************ CSS SECTION A PROPOS **********/
+
+#top-section, #middle-section, #bottom-section p {
+    font-family: "Open Sans";
+}
+
+#top-section {
+    background-color: #F0E1C3;
+    width: 100%;
+}
+
+#top-section span {
+    background-color: #406C90;
+    padding: 7px;
+    color: #fff;
+}
+
+#top-section h3, #top-section p {
+    color: #406c90;
+}
+
+
+#middle-section {
+    width: 100%;
+}
+
+#middle-section span {
+    background-color: #8F8561;
+    padding: 7px;
+    color: #F0E1C3;
+}
+
+#middle-section h3 {
+    color: #464E25;
+}
+
+#middle-section p {
+    color: #8f8561;
+}
+
+#bottom-section {
+    background-color: #A86149;
+    width: 100%;
+}
+
+#bottom-section span {
+    background-color: #EBB99C;
+    padding: 7px;
+    color: #fff;
+}
+
+#bottom-section h3, #bottom-section p {
+    color: #fff;
+}
+
+.about-picture, .about-content {
+    margin-top: 100px;
+}
+
+.about-picture img {
+    width: 400px;
+    margin-bottom: 100px;
+}
+
+.about-content {
+    margin: 250px 0px 100px 0px;
+}
+
+.about-content h2, h3 {
+    margin-bottom: 40px;
+}
+
+.about-picture-mid {
+    text-align: right;
+    margin: 100px 0px 100px 0px;
+}
+
+.about-picture-mid img {
+    width: 400px;
+}
+
+/********* CSS SECTION PICTOS/MAINS ******/
+
+#wizard {
+    margin-top: 100px;
+    text-align: center;
+    color: #A86149;
+}
+
+#wizard h2 {
+    color: #A86149 !important;
+    /* font-size: ; */
+}
+
+/* Bootstrap img-fluid */
+/*#wizard img {
+    height: 90px;
+}*/
+
+#hands {
+    margin-bottom: 50px;
+}
+
+#hand-section {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#hand-section p {
+    font-family: "Open Sans", sans-serif;
+    color: #A86149;
+}
+
+.hand img {
+    width: 200px
+}
+
+.hand h4 {
+    margin: 35px 0px 21px 0px;
+}
+
+.hand p {
+    margin-bottom: 50px;
+}
+
+#hand2 {
+    margin-top: 14px;
+}
+
+#hand3 {
+    margin-top: 4px;
+}
+
+#hands-valid {
+    text-align: right;
+}
+
+/* #hands-button i{
+    margin-left: 5px;
+} */
+
+#hands-button, .form-button {
+    font-family: "Bakso Sapi", sans-serif;
+    background-color: #A86149;
+    color: #fff;
+    width: 250px;
+    padding: 8px 35px 8px 50px;
+    border: 1px solid #A86149;
+    border-radius: 5px;
+    word-spacing: 3px;
+}
+
+#hands button:hover, #contact-form button:hover {
+    background-color: #fff;
+    color: #A86149;
+    border: 1px solid #A86149;
+}
+
+/********* CSS SECTION CONTACT ******/
+
+#contact {
+/*     background: url(../img/logo_form.png), #DAEEFF;
+    background-repeat: no-repeat;
+    background-size: 710px;
+    background-position: right; */
+    background-color: #DAEEFF;
+    height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact p {
+    font-family: "Open Sans", sans-serif;
+    color: #A86149;
+}
+
+#contact .container {
+    background: url(../images/home/logo_form.png);
+    background-repeat: no-repeat;
+    background-size: 700px;
+    background-position: right;
+    height: 750px;
+}
+
+#contact .row {
+    margin-top: 8%;
+    margin-right: 4%;
+}
+
+#background-service {
+    width: 490px;
+    text-align: center;
+}
+
+#service{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #A86149;
+    height: 500px;
+    padding: 2%;
+    margin-top: 8%;
+}
+
+#service, #help {
+    background-color: #fff;
+    color: #A86149;
+    border-radius: 9px;
+    box-shadow: 0px 3px 6px #808080;
+}
+
+#background-logo {
+/*     background: url(../img/logo_form.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; */
+    margin: -4% auto 0 7%;
+    width: 600px;
+}
+
+#help {
+    height: 560px;
+    width: 600px;
+}
+
+#help .row {
+    margin-left: 1%;
+    margin-top: 4%;
+}
+
+.asterisk {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+}
+
+::placeholder{
+    color:#A86149 !important;
+    opacity: 0.4 !important;
+}
+
+.asterisk img {
+    height: 15px;
+    margin-top: 8px;
+}
+
+.asterisk p {
+    width: 80%;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+#asterisk-section {
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#contact-form {
+    width: 40%;
+}
+
+#separator {
+    width: 3px;
+    margin-top: 100px;
+    margin-left: 48px;
+}
+
+input, textarea {
+    color: #A86149 !important;
+    border: 1px solid #A86149 !important;
+    border-radius: 8px !important;
+    width: 302px !important;
+    margin-bottom: 25px !important;
+    padding: 5px 0px 5px 20px !important;
+}
+i.fas.fa-chevron-right.fs4{
+    font-size: 20px;
+    margin-right: 10px ;
+}
+button#hands-button.btn.btn-primary{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#contact_Enregistrer {
+    margin-left: 50px;
+}
+
+
+
+/******** CSS MEDIA QUERIES ******/
+
+@media screen and (max-width: 375px) {
+
+    #hands h2 {
+        margin-top: 50px;
+        width: 100%;
+        font-size: 29px
+    }
+
+    #cover-section {
+        background-image: url(../images/home/photo-1466721591366-2d5fba72006d.png);
+        background-size: cover;
+        height: 550px;
+    }
+
+    #top-section, #middle-section, #bottom-section {
+        height: 830px;
+    }
+
+    #middle-section .row {
+        flex-direction: column-reverse;
+    }
+
+    .about-picture, .about-picture-mid {
+        margin-top: 50px;
+    }
+
+    .about-picture img, .about-picture-mid img {
+        width: 100%;
+    }
+
+    .about-content {
+        margin-top: -50px;
+        text-align: center;
+    }
+
+    #wizard {
+        margin-top: 50px;
+    }
+
+    #wizard img {
+        width: 100%;
+        height: 60px;
+    }
+
+    #hands-button {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    
+
+    #contact .row {
+        flex-direction: column-reverse;
+    }
+
+    #background-service, #background-logo {
+        width: 100%;
+    }
+
+    #contact-form, #service, #help {
+        width: 100%;
+    }
+
+} */
+
+@media screen and (max-width: 375px) {
+    #cover-section {
+        background-image: url(../images/home/joel-herzog-105060-mobile.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 333px;
+    }
+
+    #cover-content {
+        padding-top: 130px;
+        margin-right: 56px;
+    }
+
+    #cover-content h1 {
+        font-size: 15px;
+    }
+
+    #cover-content span {
+        font-size: 3rem;
+    }
+
+    #cover-content button {
+        padding: 8px 52px 8px 52px;
+    }
+
+    #top-section, #middle-section, #bottom-section {
+        height: 830px;
+    }
+
+    #top-section {
+        margin-top: -4px;;
+    }
+
+    #middle-section .row {
+        flex-direction: column-reverse;
+    }
+
+    .about-picture, .about-picture-mid {
+        margin-top: 50px;
+    }
+
+    .about-picture img, .about-picture-mid img {
+        width: 100%;
+    }
+
+    .about-content {
+        margin-top: -50px;
+        text-align: center;
+    }
+
+    #hands h2 {
+        margin-top: 50px;
+        width: 100%;
+        font-size: 29px
+    }
+
+    #hands-button {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    #contact .row {
+        flex-direction: column-reverse;
+    }
+
+    #background-service, #background-help {
+        width: 100%;
+    }
+
+    #contact-form, #service, #help {
+        width: 100%;
+    }
+}

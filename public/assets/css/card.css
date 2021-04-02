@@ -1,0 +1,60 @@
+.card-recto {
+  width:257px;
+  height:294px;
+  border-radius:10px;
+  box-shadow: 0px 0px 10px grey;
+  /* position: relative; */
+  /* margin-right:2.5rem;
+  margin-left:2.5rem; */
+  margin-bottom:8rem;
+  transform: scale(1);
+  object-position: center;
+  transition: transform 0.5s;
+}
+
+.btn-recto {
+  background-color: #EAB25B;
+  color:#F4E3C5;
+  border-radius:50px;
+  font-weight: bold;
+  border:none;
+  height:30px;
+  width:150px;
+  position: absolute;
+  bottom:-15px;
+  left:50px;
+  box-shadow: 0px 0px 10px grey;
+  z-index: 4;
+  padding:2px 0 5px 0;
+}
+
+.heart-recto {
+  position:absolute;
+  right:10px;
+  top:10px;
+  font-size: 20px;
+  color:#EEDFC2;
+  z-index: 3;
+}
+
+.fas.fa-heart {
+  color:rgb(169, 44, 44);
+}
+
+.title-recto {
+  color:white;
+  position: absolute;
+  bottom:20px;
+  left:0;
+  text-align: center;
+  width:100%;
+  font-size: 2rem;
+  display:block;
+  font-family:Bakso Sapi;
+}
+
+.img-recto {
+  height:100%;
+  width:100%;
+  border-radius:10px;
+}

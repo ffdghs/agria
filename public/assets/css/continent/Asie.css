@@ -1,0 +1,14 @@
+#container-animal {
+  background-image: url('../../images/backgrounds/continents/asie.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#continentTitre {
+  color:#9A4101;
+}
+
+#flecheSvg {
+  fill:#9A4101;
+}

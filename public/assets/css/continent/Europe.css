@@ -1,0 +1,14 @@
+#container-animal {
+  background-image: url('../../images/backgrounds/continents/europe.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#continentTitre {
+  color:#386284;
+}
+
+#flecheSvg {
+  fill:#386284;
+}

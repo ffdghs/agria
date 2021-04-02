@@ -1,0 +1,116 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Inscription
+{% endblock %}
+
+{% block style %}
+	{{parent()}}
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+	<link href="{{ asset('assets/css/register.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+	{% for flashError in app.flashes('verify_email_error') %}
+		<div class="alert alert-danger" role="alert">{{ flashError }}</div>
+	{% endfor %}
+
+	<section class="container mt-2">
+		<div class="row mt-5">
+
+			<section id="parents" class="col-8 mt-4">
+				<h2 class="text-center">Précisions pour les parents</h2>
+
+				<div class="mt-5">
+					<h3 class="text-center">Quelques informations utiles:</h3>
+
+					<article class="row m-5">
+						<div class="col-2">
+							<img src="{{ asset('assets/images/register/connexion_icon_top.png') }}" alt="">
+						</div>
+						<div class="col-10">
+							<p>Nous conservons les informations demandées afin d’améliorer les fonctionnalités du site. Le nom d’utilisateur et le mot de passe nous aident à identifier un compte existant. L’âge ou l’année de naissance de l’enfant nous permettent de proposer un contenu adapté.</p>
+						</div>
+					</article>
+
+					<article class="row m-5">
+						<div class="col-2">
+							<img src="{{ asset('assets/images/register/connexion_icon_mid.png') }}" alt="">
+						</div>
+						<div class="col-10">
+							<p>L’adresse courriel renseignée lors de l’inscription nous permet de tenir les parents informés des connexions. Votre enfant ne peut pas s’inscrire seul. C’est pour cela que nous vous demandons, en tant que parent, votre adresse e-mail lors de la création de compte et pour toute future connexion.</p>
+						</div>
+					</article>
+
+					<article class="row m-5">
+						<div class="col-2">
+							<img src="{{ asset('assets/images/register/connexion_icon_bottom.png') }}" alt="">
+						</div>
+						<div class="col-10">
+							<p>Lors de la création du compte, plutôt que le véritable prénom de votre enfant, nous vous invitons à choisir un pseudo dont il pourra  facilement se souvenir.</p>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<div id="separator" class="d-none d-xxl-block">
+				<img src="{{ asset('assets/images/home/separateur_vertical.png') }}" alt="">
+			</div>
+
+			<section class="col-4" id="inscription">
+				<h1 class="text-center">Inscription</h1>
+				<h3>Avant de t'inscrire, n'oublie pas de demander l'autorisation à tes parents !</h3>
+
+				<div class="form mt-5">
+					{{ form_start(registrationForm) }}
+
+					{{ form_row(registrationForm.email_user, {
+                                label: 'Votre adresse email'
+                            })}}
+
+					<label for="">Mot de passe</label>
+					<div class="input-group mb-3 position-relative">
+						{{ form_widget(registrationForm.plainPassword.first, {
+                            }) }}
+						<span id="btn" class="btn-jaune btn btn-outline eye position-absolute end-0">
+							<i id="icon" class="far fa-eye-slash"></i>
+						</span>
+					</div>
+
+					<label for="">Confirmation mot de passe</label>
+					<div class="input-group mb-3 position-relative">
+						{{ form_widget(registrationForm.plainPassword.second, {
+                            }) }}
+						<span id="btn" class="btn-jaune btn btn-outline eye position-absolute end-0">
+							<i id="icon2" class="far fa-eye-slash"></i>
+						</span>
+					</div>
+
+					{{ form_row(registrationForm.login_user, {
+                		label: 'Pseudo'
+            		}) }}
+
+
+					<div class="condi">
+						{{ form_row(registrationForm.agreeTerms, {
+                                label: 'J\'accepte les conditions générales d\'utilisation'
+                            }) }}
+					</div>
+
+					<div class="button">
+						<button type="submit" class="btn-jaune btn border rounded-pill shadow">S'inscrire</button>
+					</div>
+					{{ form_end(registrationForm) }}
+				</div>
+				<div
+					class="mt-4">
+					{# <button type="submit" class="btn" id="creer">Créer un compte avec une adresse e-mail</button> #}
+					<button type="submit" class="btn" id="creer">Créer un compte avec un compte Google</button>
+				</div>
+			</section>
+		</div>
+	</section>
+{% endblock %}
+{% block script %}
+	{{parent()}}
+	<script src="{{asset('assets/js/register.js')}}"></script>
+{% endblock %}

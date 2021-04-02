@@ -1,0 +1,14 @@
+#container-animal {
+  background-image: url('../../images/backgrounds/continents/antarctique.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#continentTitre {
+  color:#6399F0;
+}
+
+#flecheSvg {
+  fill:#6399F0;
+}

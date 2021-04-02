@@ -1,0 +1,44 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}
+	Modification du profile de
+	{{app.user.nameuser}}
+{% endblock %}
+
+{% block style %}
+	{{parent()}}
+	<link rel="stylesheet" href="{{ asset('assets/css/editUser.css') }}">
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<h1>Modification du profile de
+			<span>{{app.user.loginuser}}</span>
+		</h1>
+
+		<div class="form d-flex justify-content-center">
+			{{ form_start(form) }}
+
+			{{ form_row(form.login_user, {
+                label: 'Pseudo'
+            })}}
+
+			{{ form_row(form.email_user, {
+                
+            })}}
+
+			<label for="">Mon avatar</label>
+			
+			{{ form_widget(form.avatar, {
+            })}}
+
+
+			<div class="button">
+				<button type="submit" class="btn-jaune btn border rounded-pill shadow">Valider</button>
+			</div>
+			{{ form_end(form) }}
+			{# {{form(form)}} #}
+		</div>
+	</div>
+
+{% endblock %}
